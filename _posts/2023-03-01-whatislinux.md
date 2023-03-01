@@ -17,7 +17,7 @@ Linux = klon Unix dirancang para hacker.
 
 Filosofi dari open source seperti dibawah ini :
 
-[www.opensource.org]
+[opensource.org](https://opensource.org)
 
 > "The basic idea behind open source is very simple : When programmers can read, redistribute, and modify the source code for a piece of software, the software evolves. People improve it, people adapt it, people fix bugs. And this can happen at a speed that, if one is used to the slow pace of conventional software development, seems atonishing"
 
