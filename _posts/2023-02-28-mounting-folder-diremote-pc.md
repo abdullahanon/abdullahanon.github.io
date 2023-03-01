@@ -1,5 +1,5 @@
 ---
-title: mounting folder remote pc
+title: Mounting folder remote pc
 layout: post
 ---
 
