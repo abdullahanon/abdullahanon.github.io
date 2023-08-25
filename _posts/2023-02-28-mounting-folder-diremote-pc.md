@@ -15,6 +15,6 @@ Untuk mengakses folder diremote pc yang berbasis os windows dari linux, ada bebe
 
    > masukkan kembali password administrator yang diminta..
 
-2. Maka folder diremote pc dapat diakses pada folder /mnt/hd/ dikomputer lokal milik kita..<br>
+2. Maka folder diremote pc dapat diakses pada folder /mnt/hd/ dikomputer lokal milik kita..  
 Sekian, semoga bermanfaat ...barakallah fiikum.
 

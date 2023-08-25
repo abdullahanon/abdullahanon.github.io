@@ -15,8 +15,6 @@
 
 <a href="/blog.html">Blog</a>
 
-<a href="/categories.html">Categories</a>
-
 </nav>
 
 <h1>Membuat virtual pc dengan Xen</h1>
@@ -24,15 +22,17 @@
 
 <h2 id="xen">Xen</h2>
 
-<p>Dengan xen kita dapat menjadikan pc kita terinstall didalamnya beberapa mesin virtualisasi. openSUSE adalah salah satu distro yang sudah mendukung penggunaan xen dengan mudah, kita hanya tinggal install xen tersebut menggunakan paket manager opensuse ..zypper.</p>
+<p>Dengan xen kita dapat menjadikan pc kita terinstall didalamnya beberapa mesin virtualisasi. openSUSE adalah salah satu distro yang sudah mendukung penggunaan xen dengan mudah, terlebih dahulu kita install xen tersebut menggunakan paket manager yang dimiliki opensuse yaitu zypper.</p>
 
-<p>Berikut ini urutan langkah yang saya sudah dilakukan, menggunakan openSUSE Leap 15.4.</p>
+<p>Berikut ini urutan langkah yang saya lakukan, menggunakan openSUSE Leap 15.4.</p>
 <ol>
-  <li>Kita update terlebih dahulu os kita menggunakan  <br />
-$sudo zypper update <br /></li>
-  <li>Kemudian kita install xen tersebut <br />
-$sudo zypper in -t pattern xen <br /></li>
+  <li>Kita update terlebih dahulu os kita<br />
+$sudo zypper update</li>
+  <li>Kemudian kita install xen tersebut<br />
+$sudo zypper in -t pattern xen</li>
 </ol>
+
+<p>Setelah paket xen beserta tools pendukungnya terinstall, kita tinggal buat virtual mesin yang kita mau, bisa menggunakan gui atau melalui terminal mode.</p>
 
 
 
