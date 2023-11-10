@@ -1,0 +1,13 @@
+I"–<h2 id="xen">Xen</h2>
+
+<p>Dengan xen kita dapat menjadikan pc kita terinstall didalamnya beberapa mesin virtualisasi. openSUSE adalah salah satu distro yang sudah mendukung penggunaan xen dengan mudah, terlebih dahulu kita install xen tersebut menggunakan paket manager yang dimiliki opensuse yaitu zypper.</p>
+
+<p>Berikut ini urutan langkah yang saya lakukan untuk menginstall paket xen, menggunakan openSUSE Leap 15.4.</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span><span class="o">.</span> <span class="no">Kita</span> <span class="n">update</span> <span class="n">terlebih</span> <span class="n">dahulu</span> <span class="n">os</span> <span class="n">kita</span>  
+   <span class="vg">$sudo</span> <span class="n">zypper</span> <span class="n">update</span>  
+<span class="mi">2</span><span class="o">.</span> <span class="no">Kemudian</span> <span class="n">kita</span> <span class="n">install</span> <span class="n">xen</span> <span class="n">tersebut</span>  
+   <span class="vg">$sudo</span> <span class="n">zypper</span> <span class="k">in</span> <span class="o">-</span><span class="n">t</span> <span class="n">pattern</span> <span class="n">xen</span>
+</code></pre></div></div>
+<p>Setelah paket xen beserta tools pendukungnya terinstall, kita tinggal buat virtual mesin yang kita mau, bisa menggunakan gui atau melalui terminal mode.</p>
+
+:ET
