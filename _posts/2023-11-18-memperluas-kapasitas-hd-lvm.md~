@@ -1,0 +1,7 @@
+---
+title: Memperluas Kapasitas Hardisk LVM
+layout: post
+---
+
+Sistem operasi linux slackware mendukung penggunaan lvm dalam tipe format harddisk nya, yang memudahkan kita mengatur kapasitas harddisk tersebut sesuai keinginan kita.
+Berikut ini langkah yang saya lakukan untuk memperluas kapasitas harddisk pada laptop yang saya gunakan.

@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<title>Membuat virtual pc dengan Xen</title>
-<link href="/assets/css/styles.css" rel="stylesheet" />
-</head>
-<body>
-<nav>
-
-<a href="/">Home</a>
-
-<a href="/about.html">About</a>
-
-<a href="/blog.html">Blog</a>
-
-</nav>
-
-<h1>Membuat virtual pc dengan Xen</h1>
-<p><b>26 Jun 2023</b></p>
-
-<h2 id="xen">Xen</h2>
+I"ö<h2 id="xen">Xen</h2>
 
 <p>Dengan xen kita dapat menjadikan pc kita .. terinstall didalamnya beberapa mesin virtualisasi. openSUSE adalah salah satu distro yang sudah mendukung penggunaan xen dengan mudah, terlebih dahulu kita install xen tersebut menggunakan paket manager yang dimiliki opensuse yaitu zypper.</p>
 
@@ -35,7 +13,4 @@ $sudo zypper in -t pattern xen</li>
 
 <p>Setelah paket xen beserta tools pendukungnya terinstall, kita tinggal buat virtual mesin yang kita mau, bisa menggunakan gui atau melalui terminal mode.</p>
 
-
-
-</body>
-</html>
+:ET
