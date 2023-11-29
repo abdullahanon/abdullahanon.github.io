@@ -1,0 +1,9 @@
+I"ö<p>Ketika kita mengalami kegagalan sinkronisasi antar pc (guest) pada xen, berikut ini yang biasa saya lakukan:</p>
+
+<ol>
+  <li>#drbdadm secondary r0</li>
+  <li>#drbdadm disconnect r0</li>
+  <li>#drbdadm connect â€“discard-my-data r0</li>
+</ol>
+
+:ET

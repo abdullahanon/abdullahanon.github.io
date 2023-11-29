@@ -1,11 +1,10 @@
 services:
-   app:
+  app:
      image: jekyll/jekyll:4.2.0
      ports:
-      - 3001:4000
-
+       - 3000:4000
      working_dir: /app
      volumes:
-      - ./:/app
+       - ./:/app
      command: jekyll serve
-
+     

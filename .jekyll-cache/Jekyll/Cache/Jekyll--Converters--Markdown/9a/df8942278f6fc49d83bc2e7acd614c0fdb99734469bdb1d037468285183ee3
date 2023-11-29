@@ -1,7 +1,0 @@
-I"º<p>Sistem operasi linux slackware mendukung penggunaan lvm dalam tipe format harddisk nya, yang memudahkan kita mengatur kapasitas harddisk tersebut sesuai keinginan kita.<br />
-Berikut ini langkah yang saya lakukan untuk memperluas kapasitas harddisk pada laptop yang saya gunakan.</p>
-<ol>
-  <li>Kita cek layout harddisk menggunakan cfdisk dilanjutkan membuat partisi dengannya dan type partisi kita atur menjadi LVM</li>
-  <li></li>
-</ol>
-:ET
