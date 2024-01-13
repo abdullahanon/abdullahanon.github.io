@@ -1,9 +1,0 @@
-I"<p>Pernah mengalami kegagalan sinkronisasi antar pc (guest) pada xen ketika power failure saat server kita hidupkan kembali, guest pc tidak bisa saling sinkronisasi, alhamdulillah bisa diatasi dengancara sbb:</p>
-
-<ol>
-  <li>#drbdadm secondary r0</li>
-  <li>#drbdadm disconnect r0</li>
-  <li>#drbdadm connect â€“discard-my-data r0</li>
-  <li>Selesai ..barakallah fiikum. :)</li>
-</ol>
-:ET

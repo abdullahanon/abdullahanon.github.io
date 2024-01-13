@@ -1,0 +1,9 @@
+---
+title: Bagaimana menghidupkan fungsi root login gui pada debian 12
+layout: post
+---
+
+Untuk merubah ukuran partisi home/user pada debian dibutuhkan login melalui root agar terlepas dari mounting home/user, sayangnya secara default
+fungsi ini di disable oleh debian untuk masalah keamanan, alhamdulillah bisa kita atasi dengan beberapa langkah berikut:
+
+1. Ubah user kita menjadi root, kemudian edit file /etc/gdm3/daemon.conf

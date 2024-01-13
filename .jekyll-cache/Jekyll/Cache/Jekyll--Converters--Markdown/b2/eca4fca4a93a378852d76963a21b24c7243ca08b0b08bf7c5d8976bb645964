@@ -1,0 +1,3 @@
+I"<p>Untuk merubah ukuran partisi home/user pada debian dibutuhkan login melalui root agar terlepas dari mounting home/user, sayangnya secara default
+fungsi ini di disable oleh debian untuk masalah keamanan, alhamdulillah bisa kita atasi dengan beberapa langkah berikut:</p>
+:ET
