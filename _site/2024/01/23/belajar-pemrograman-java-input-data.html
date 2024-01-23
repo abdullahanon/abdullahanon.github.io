@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Belajar pemrograman java Input data</title>
+<link href="/assets/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<nav>
+
+<a href="/">Home</a>
+
+<a href="/about.html">About</a>
+
+<a href="/blog.html">Blog</a>
+
+</nav>
+
+<h1>Belajar pemrograman java Input data</h1>
+<p><b>23 Jan 2024</b></p>
+
+<p>Pelajaran mendasar yang coba saya tulis ini mengenai input data menggunakan java program dan mysql. Untuk database kita namakan dengan jsdatabase, kemudian didalamnya terdapat table <br />
+karyawan dengan struktur sbb:</p>
+<ol>
+  <li>idkaryawan int(11) unique not null primary key auto_increment</li>
+  <li>nrp varchar(45) unique not null</li>
+  <li>nama varchar(255) not null</li>
+</ol>
+
+<p>Untuk menghubungkan java programming dengan mysql kita butuh connector yang bisa kita unduh disitus mysql,<br />
+Dalam percobaan kali ini saya menggunakan mysql-connector-j-8.2.0.jar, program yang kita buat bisa kita eksekusi menggunakan perintah <br />
+javac -cp InputDataCuti/src/lib/mysql-connector-j-8.2.0.jar InputDataCuti/src/InputDataCuti.java dilanjutkan dengan java -cp InputDataCuti/src/lib/mysql-connector-j-8.2.0.jar InputDataCuti/src/InputDataCuti.java</p>
+
+<p>Dan untuk script program InputDataCuti.java tersebut sbb:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class InputDataCuti {
+
+    static final String JDBC_URL = "jdbc:mysql://localhost:3306/jsdatabase";
+    static final String USER = "root";
+    static final String PASSWORD = "bismillah";
+
+    public static void main(String[] args) {
+	try {
+	    Connection connection = DriverManager.getConnection(JDBC_URL,USER,PASSWORD);
+
+	    Scanner scanner = new Scanner(System.in);
+
+	    System.out.print("NRP Karyawan: ");
+	    String nrp = scanner.nextLine();
+
+	    System.out.print("Nama : ");
+	    String nama = scanner.nextLine();
+
+	    String sql = "INSERT INTO karyawan (nrp,nama) VALUES (?,?)";
+
+	    try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+		
+		preparedStatement.setString(1,nrp);
+		preparedStatement.setString(2,nama);
+
+		int rowCount = preparedStatement.executeUpdate();
+
+		if (rowCount &gt; 0) {
+		    System.out.println("Data cuti berhasil di input !");
+		}else{
+		    System.out.println("Gagal simpan data cuti !");
+		}
+	    }
+	    connection.close();
+	} catch (SQLException e) {
+	    e.printStackTrace();
+	}
+    }
+}
+</code></pre></div></div>
+
+
+</body>
+</html>

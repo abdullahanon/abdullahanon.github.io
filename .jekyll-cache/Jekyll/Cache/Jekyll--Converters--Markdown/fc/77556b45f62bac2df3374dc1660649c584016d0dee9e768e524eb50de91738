@@ -1,7 +1,0 @@
-I"n<p>Untuk merubah ukuran partisi home/user pada debian dibutuhkan login melalui root agar terlepas dari mounting home/user, sayangnya secara default
-fungsi ini di disable oleh debian untuk masalah keamanan, alhamdulillah bisa kita atasi dengan beberapa langkah berikut:</p>
-
-<ol>
-  <li>Ubah user kita menjadi root, kemudian edit file /etc/gdm3/daemon.conf</li>
-</ol>
-:ET
