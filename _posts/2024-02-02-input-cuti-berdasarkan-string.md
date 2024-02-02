@@ -1,0 +1,79 @@
+---
+title: Input cuti dengan acuan string nama
+layout: post
+---
+
+Berikut ini contoh scriptnya :)
+
+~~~~~
+package co.id.jayatama;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class App 
+{
+
+    static String url = "jdbc:mysql://localhost:3306/jsdatabases";
+    static String user= "root";
+    static String passwd="bi5millah";
+    
+    public static void main( String[] args )
+    {
+        try{
+
+	    Connection con = DriverManager.getConnection(url,user,passwd);
+	    Scanner sc = new Scanner(System.in);
+
+	    System.out.print("?Nama pegawai hendak cuti : ");
+	    String nama = sc.nextLine();
+
+	    int idkar = getIdKaryawan(con,nama);
+
+	    if(idkar == -1){
+		System.out.println("Maaf nama karyawan tidak ditemukan");
+	    }else{
+		System.out.println("?Keterangan cuti : ");
+		String keterangan = sc.nextLine();
+
+		String sql = "insert into cuti (idkar,keterangan) values (?,?)";
+
+		try(PreparedStatement preparedStatement = con.prepareStatement(sql)){
+		    preparedStatement.setInt(1,idkar);
+		    preparedStatement.setString(2,keterangan);
+		    int rowCount = preparedStatement.executeUpdate();
+
+		    if(rowCount > 0){
+			System.out.println("Input data pengajuan cuti berhasil !");
+		    }else{
+			System.out.println("Input data pengajuan cuti gagal !");
+		    }
+		}
+	    }
+	    
+	}catch(SQLException e){
+	    e.printStackTrace();
+	}
+    }
+
+    private static int getIdKaryawan(Connection con, String nama)throws SQLException {
+
+	String sql = "select idkar from karyawan where nama = ?";
+
+	try(PreparedStatement preparedStatement = con.prepareStatement(sql)){
+	    preparedStatement.setString(1,nama);
+	    try(ResultSet rs = preparedStatement.executeQuery()){
+		if(rs.next()){
+		    return rs.getInt("idkar");
+		}else{
+		    return -1;
+		}
+	    }
+	}
+    }
+}
+~~~~~~~~~~~~~~~~~~~~~~
